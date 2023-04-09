@@ -24,4 +24,5 @@ public class DriverB extends Driver{
         System.out.println("Водитель категории В " +getName() + "заправляется");
 
     }
+
 }

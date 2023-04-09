@@ -1,11 +1,13 @@
 import Transport.*;
 
+import javax.swing.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args){
 
         List<Transport <?>> transportList = new ArrayList<>();
+
 
         for (int i =1; i<=4;i++){
             DriverB driverB = new DriverB("категории B  № " + i,
@@ -157,6 +159,20 @@ public class Main {
         }
         map.entrySet()
                 .forEach((entry) -> System.out.println(entry.getKey() + " : " + entry.getValue()));
+
+        Set<Driver> driverSet = new HashSet<Driver>();
+        Driver john = new DriverB("John", true, 10);
+        Driver dmitry = new DriverB("Dmitry", true, 10);
+        Driver alex = new DriverB("Alex", true, 10);
+        driverSet.add(john);
+        driverSet.add(dmitry);
+        driverSet.add(alex);
+        driverSet.add(alex);
+        Iterator <Driver> iterator = driverSet.iterator();
+        while (iterator.hasNext()){
+            Driver driver = iterator.next();
+            System.out.println(driver);
+        }
 
 
     }
